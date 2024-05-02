@@ -1,0 +1,37 @@
+Register:
+  - index: 0
+    locator: id:customer.firstName
+    text: FirstName
+  - index: 1
+    locator: id:customer.lastName
+    text: LastName
+  - index: 2
+    locator: id:customer.address.street
+    text: Street
+  - index: 3
+    locator: id:customer.address.city
+    text: City
+  - index: 4
+    locator: id:customer.address.state
+    text: State
+  - index: 5
+    locator: id:customer.address.zipCode
+    text: ZipCode
+  - index: 6
+    locator: id:customer.phoneNumber
+    text: 09999
+  - index: 7
+    locator: id:customer.ssn
+    text: SSN
+  - index: 8
+    locator: id:customer.username
+    text: username
+  - index: 9
+    locator: id:customer.password
+    text: password
+  - index: 10
+    locator: id:repeatedPassword
+    text: password
+  - index: 11
+    locator: id:repeatedPassword
+    text: notmatchpassword

@@ -1,0 +1,33 @@
+Register_Error:
+  - locator: id:customer.firstName.errors
+    text: First name is required.
+    index: 0
+  - locator: id:customer.lastName.errors
+    text: Last name is required.
+    index: 1
+  - locator: id:customer.address.street.errors
+    text: Address is required.
+    index: 2
+  - locator: id:customer.address.city.errors
+    text: City is required.
+    index: 3
+  - locator: id:customer.address.state.errors
+    text: State is required.
+    index: 4
+  - locator: id:customer.address.zipCode.errors
+    text: Zip Code is required.
+    index: 5
+  - locator: id:customer.ssn.errors
+    text: Social Security Number is required.
+    index: 7
+  - locator: id:customer.username.errors
+    text: Username is required.
+    index: 8
+  - locator: id:customer.password.errors
+    text: Password is required.
+    index: 9
+  - locator: id:repeatedPassword.errors
+    text: Password confirmation is required.
+    index: 10
+
+    

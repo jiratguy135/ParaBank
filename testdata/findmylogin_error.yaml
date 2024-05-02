@@ -1,0 +1,22 @@
+FindmyLoginError:
+  - locator: id:firstName.errors
+    text: First name is required.
+    index: 0
+  - locator: id:lastName.errors
+    text: Last name is required.
+    index: 1
+  - locator: id:address.street.errors
+    text: Address is required.
+    index: 2
+  - locator: id:address.city.errors
+    text: City is required.
+    index: 3
+  - locator: id:address.state.errors
+    text: State is required.
+    index: 4
+  - locator: id:address.zipCode.errors
+    text: Zip Code is required.
+    index: 5
+  - locator: id:ssn.errors
+    text: Social Security Number is required.
+    index: 6

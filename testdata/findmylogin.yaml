@@ -1,0 +1,25 @@
+FindmyLogin:
+  - index: 0
+    locator: id:firstName
+    text: FirstName
+  - index: 1
+    locator: id:lastName
+    text: LastName
+  - index: 2
+    locator: id:address.street
+    text: Street
+  - index: 3
+    locator: id:address.city
+    text: City
+  - index: 4
+    locator: id:address.state
+    text: State
+  - index: 5
+    locator: id:address.zipCode
+    text: ZipCode
+  - index: 6
+    locator: id:ssn
+    text: SSN
+  - index: 7
+    locator: id:ssn
+    text: SSN_Fail

@@ -1,0 +1,19 @@
+Error:
+  - index: 911
+    locator: id:repeatedPassword.errors
+    text: Passwords did not match.
+  - index: 810 
+    locator: id:customer.username.errors
+    text: This username already exists.
+  - index: 1
+    locator: css:p[class="error"]:nth-child(2)
+    text: Please enter a username and password.
+  - index: 29
+    locator: xpath://*[@id="rightPanel"]/p
+    text: The customer information provided could not be found.
+  - index: 34
+    locator: xpath://*[@id="amount.errors"]
+    text: The amount cannot be empty. 
+  - index: 35
+    locator: id:amount.errors
+    text: Please enter a valid amount.
