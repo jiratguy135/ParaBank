@@ -65,9 +65,11 @@ Select Type of Account
 Open New Account Button
     Wait Until Element Is Visible    xpath://*[@id="leftPanel"]/h2
     Click Element    //*[@id="rightPanel"]/div/div/form/div/input
+    Sleep    5
 Verify Open New Account Successfully
-    Wait Until Element Is Visible    id=newAccountId
+    Wait Until Element Is Visible    xpath://*[@id="rightPanel"]/div/div/h1
     common.Check TXT    xpath://*[@id="rightPanel"]/div/div/h1    Account Opened!
+    Sleep    5
 Accounts Overview Button on Left Bar
     Wait Until Element Is Visible    xpath://*[@id="leftPanel"]/h2
     Click Element    xpath://*[@id="leftPanel"]/ul/li[2]/a
@@ -76,13 +78,21 @@ Verify Accounts Overview Successfully
     common.Check TXT    xpath://*[@id="rightPanel"]/div/div/h1    Accounts Overview
 Select Account and Verify Accounts Detail Tab
     Wait Until Element Is Visible    xpath://*[@id="rightPanel"]/div/div/h1
-    #${Account}    Get Text    xpath://*[@id="accountTable"]/tbody/tr[1]/td[1]
-    #Click Element    css:a[href="activity.htm?id=${Account}"]:nth-child(1)
-    #Sleep    10
-    #Wait Until Element Is Visible    id:accountId
-    #${Account_detail}    Get Text    id:accountId
-    #Should Be Equal    ${Account}    ${Account_detail}
+    Wait Until Element Is Visible    xpath://*[@id="accountTable"]/tbody/tr[1]/td[1]/a
+    ${Account}    Get Text    xpath://*[@id="accountTable"]/tbody/tr[1]/td[1]
+    ${Balance}    Get Text    xpath://*[@id="accountTable"]/tbody/tr[1]/td[2]
+    ${Available_Amount}    Get Text    xpath://*[@id="accountTable"]/tbody/tr[1]/td[3]
+    Click Element    css:a[href="activity.htm?id=${Account}"]:nth-child(1)
+    Sleep    5
+    Wait Until Element Is Visible    id:accountId
+    ${Account_detail}    Get Text    id:accountId
+    ${Balance_detail}    Get Text    id:balance
+    ${Available_Amount_detail}    Get Text    id:availableBalance
     common.Check TXT    xpath://*[@id="rightPanel"]/div/div[1]/h1    Account Details
+    Should Be Equal    ${Account}    ${Account_detail}
+    Should Be Equal    ${Balance}    ${Balance_detail}
+    Should Be Equal    ${Available_Amount}    ${Available_Amount_detail}
+    
 Transfer Funds Button on Left Bar
     Wait Until Element Is Visible    xpath://*[@id="rightPanel"]/div/div/h1
     Click Element    xpath://*[@id="leftPanel"]/ul/li[3]/a
@@ -95,14 +105,12 @@ Transfer Button
 Input Amount Box
     [Arguments]    ${Amount}
     Wait Until Element Is Visible    xpath://*[@id="rightPanel"]/div/div/h1
-    Input Text    id:amount    ${Amount}
-    #Click Element    
+    Input Text    id:amount    ${Amount} 
     Select From List By Index    id:fromAccountId    0
-    #Click Element    xpath://*[@id="fromAccountId"]/option[1]
-    Select From List By Index    id:toAccountId    1
-    #Click Element    id:toAccountId
+    Select From List By Index    id:toAccountId    0
 Verify Transfer Complete
     [Arguments]    ${AMOUNT}
+    Sleep    5
     Wait Until Element Is Visible    xpath://*[@id="rightPanel"]/div/div/h1
     common.Check TXT    xpath://*[@id="rightPanel"]/div/div/h1    Transfer Complete!
-    common.Check TXT    id:amount    ${AMOUNT}
+    common.Check TXT    id:amount    $${AMOUNT}.00

@@ -10,7 +10,7 @@ Suite Setup    common.Open Browser ParaBank
 Suite Teardown   Close All Browsers
 *** Variables ***
 
-${NUMBER}    Test801
+${NUMBER}    Test205
 ${USERNAME}    username${NUMBER}
 ${USER}    pro_file
 ${AMOUNT}    1000
@@ -166,13 +166,7 @@ TC_030
     Sleep    5
     forgotlogin.Find my login info Button
     forgotlogin.Verify Find My Login Successfully
-    #common.Logout Button
 TC_031
-    #Sleep    3
-    #login.Input Username and Password    ${USER}    ${NUMBER}
-    #Sleep    3
-    #login.Login Button
-    #login.Verify Login Successfuly
     login.Open New Account Button on Left Bar
     login.Verify Open New Account Tab
     login.Select Type of Account    checking
@@ -186,22 +180,22 @@ TC_032
     login.Verify Open New Account Successfully
 TC_033
     login.Accounts Overview Button on Left Bar
-    #login.Select Account and Verify Accounts Detail Tab
-#TC_034
-    #login.Transfer Funds Button on Left Bar
-    #login.Transfer Button
-    #Sleep    5s
-    #common.Check Error    34
+    login.Select Account and Verify Accounts Detail Tab
+TC_034
+    login.Transfer Funds Button on Left Bar
+    Sleep    5
+    login.Transfer Button
+    common.Check Error    34
 TC_035
     login.Transfer Funds Button on Left Bar
+    Sleep    5
     login.Input Amount Box    test
     login.Transfer Button
-    Sleep    5s
     common.Check Error    35
 TC_036
     login.Transfer Funds Button on Left Bar
+    Sleep    5
     login.Input Amount Box    ${AMOUNT}
     login.Transfer Button
     login.Verify Transfer Complete    ${AMOUNT}
-    Sleep    30
 #TC_037

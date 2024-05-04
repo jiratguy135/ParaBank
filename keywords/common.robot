@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 Variables    ../testdata/error.yaml
 *** Variables ***
 ${URL}    https://parabank.parasoft.com/parabank/index.htm
-${JSPath}    document.querySelector('amount.errors').shadowRoot
+
 *** Keywords ***
 Open Browser ParaBank
     Open Browser    ${URL}    chrome
@@ -23,12 +23,12 @@ Forgot login info? Button
 Check Error
     [Arguments]    ${Code}
     Wait Until Element Is Visible    css:h1[class="title"]:nth-child(1)
+    Sleep    10
     FOR    ${error}    IN    @{Error}
         IF    '${error['index']}' == '${Code}'
             ${Actual}    Get Text    ${error['locator']} 
             Should Be Equal    ${Actual}    ${error['text']}
-        ELSE IF    '34' == '${Code}'
-            Element Text Should Be    dom:${JSPath}    ${error['text']}
+            Sleep    5
         END
     END
 Logout Button
