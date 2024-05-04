@@ -65,11 +65,10 @@ Select Type of Account
 Open New Account Button
     Wait Until Element Is Visible    xpath://*[@id="leftPanel"]/h2
     Click Element    //*[@id="rightPanel"]/div/div/form/div/input
-    Sleep    5
 Verify Open New Account Successfully
+    Sleep    5
     Wait Until Element Is Visible    xpath://*[@id="rightPanel"]/div/div/h1
     common.Check TXT    xpath://*[@id="rightPanel"]/div/div/h1    Account Opened!
-    Sleep    5
 Accounts Overview Button on Left Bar
     Wait Until Element Is Visible    xpath://*[@id="leftPanel"]/h2
     Click Element    xpath://*[@id="leftPanel"]/ul/li[2]/a

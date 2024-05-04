@@ -5,12 +5,12 @@ Resource    ../keywords/common.robot
 Resource    ../keywords/registerpage.robot
 Resource    ../keywords/login.robot
 Resource    ../keywords/forgotlogin.robot
-
+Resource    ../keywords/transfer.robot
 Suite Setup    common.Open Browser ParaBank
 Suite Teardown   Close All Browsers
 *** Variables ***
 
-${NUMBER}    Test205
+${NUMBER}    Test211
 ${USERNAME}    username${NUMBER}
 ${USER}    pro_file
 ${AMOUNT}    1000
@@ -198,4 +198,19 @@ TC_036
     login.Input Amount Box    ${AMOUNT}
     login.Transfer Button
     login.Verify Transfer Complete    ${AMOUNT}
-#TC_037
+TC_037
+    login.Transfer Funds Button on Left Bar
+    Sleep    5
+    login.Input Amount Box    ${AMOUNT}
+    transfer.Select From Account in Transfer Funds Tab    1
+    login.Transfer Button
+    login.Verify Transfer Funds Successfully
+TC_038
+    login.Transfer Funds Button on Left Bar
+    Sleep    5
+    login.Input Amount Box    ${AMOUNT}
+    transfer.Select From Account in Transfer Funds Tab    1
+    transfer.Select To Account in Transfer Funds Tab    2
+    Sleep    20
+    login.Transfer Button
+    login.Verify Transfer Funds Successfully
