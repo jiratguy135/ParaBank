@@ -14,7 +14,7 @@ Suite Setup    common.Open Browser ParaBank
 Suite Teardown   Close All Browsers
 *** Variables ***
 
-${NUMBER}    ParaBank101
+${NUMBER}    ParaBank102
 ${USERNAME}    username${NUMBER}
 ${USER}    pro_file
 ${AMOUNT}    1000
@@ -169,43 +169,43 @@ TC_030 Verify find my login Successfully in Forgot login info Page
     Sleep    5
     forgotlogin.Find my login info Button
     forgotlogin.Verify Find My Login Successfully
-TC_031
+TC_031 Verify open new account checking type Successfully in Open New Account Page
     common.Open New Account Button
     newaccount.Verify Open New Account Tab
     newaccount.Select Type of Account    checking
     newaccount.Open New Account Button
     newaccount.Verify Open New Account Successfully
-TC_032
+TC_032 Verify open new account saving type Successfully in Open New Account Page
     common.Open New Account Button
     newaccount.Verify Open New Account Tab
     newaccount.Select Type of Account    savings
     newaccount.Open New Account Button
     newaccount.Verify Open New Account Successfully
-TC_033
+TC_033 Verify account and validate account detail in Account Overview Page
     overview.Accounts Overview Button
     overview.Verify Accounts Overview Successfully
     overview.Select Account and Verify Accounts Detail Tab
-TC_034
+TC_034 Verify transfer funds box is empty in Transfer Funds Page
     common.Transfer Funds Button
     transfer.Verify Transfer Funds Successfully
     Sleep    5
     transfer.Transfer Button
     common.Check Error    34
-TC_035
+TC_035 Verify transfer funds box is invalid format in Transfer Funds Page
     common.Transfer Funds Button
     transfer.Verify Transfer Funds Successfully
     Sleep    5
     transfer.Input Amount Box    test
     transfer.Transfer Button
     common.Check Error    35
-TC_036
+TC_036 Verify not select account and transfer funds complete in Transfer Funds Page
     common.Transfer Funds Button
     transfer.Verify Transfer Funds Successfully
     Sleep    5
     transfer.Input Amount Box    ${AMOUNT}
     transfer.Transfer Button
     transfer.Verify Transfer Complete    ${AMOUNT}
-TC_037
+TC_037 Verify not select to account type and transfer funds complete in Transfer Funds Page
     common.Transfer Funds Button
     transfer.Verify Transfer Funds Successfully
     Sleep    5
@@ -213,7 +213,7 @@ TC_037
     transfer.Select From Account in Transfer Funds Tab    1
     transfer.Transfer Button
     transfer.Verify Transfer Complete    ${AMOUNT}
-TC_038
+TC_038 Verify transfer funds complete in Transfer Funds Page
     common.Transfer Funds Button
     transfer.Verify Transfer Funds Successfully
     Sleep    5
@@ -223,103 +223,103 @@ TC_038
     Sleep    20
     transfer.Transfer Button
     transfer.Verify Transfer Complete    ${AMOUNT}
-TC_039
+TC_039 Verify All mandatory field in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Click Send Payment Button
     billpay.Verify Check Mandatory    ${EMPTY}
-TC_040
+TC_040 Verify All mandatory field in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    40
     billpay.Click Send Payment Button
     common.Check Error    40
-TC_041
+TC_041 Verify account invalid format in transfer box in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    41
     billpay.Click Send Payment Button
     common.Check Error    41
-TC_042
+TC_042 Verify amount invalid format in transfer box in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    42
     billpay.Click Send Payment Button
     common.Check Error    42
-TC_043
+TC_043 Verify account and verify account not match in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    6
     billpay.Input data to box in Bill Pay Tab    43
     billpay.Click Send Payment Button
     common.Check Error    43
-TC_044
+TC_044 Verify input payee name not display warning in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    0
     billpay.Click Send Payment Button
     billpay.Verify Check Mandatory    0
-TC_045
+TC_045 Verify input address not display warning in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    1
     billpay.Click Send Payment Button
     billpay.Verify Check Mandatory    1
-TC_046
+TC_046 Verify input city not display warning in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    2
     billpay.Click Send Payment Button
     billpay.Verify Check Mandatory    2
-TC_047
+TC_047 Verify input state not display warning in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    3
     billpay.Click Send Payment Button
     billpay.Verify Check Mandatory    3
-TC_048
+TC_048 Verify input zipcode not display warning in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    4
     billpay.Click Send Payment Button
     billpay.Verify Check Mandatory    4
-TC_049
+TC_049 Verify input phone not display warning in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    5
     billpay.Click Send Payment Button
     billpay.Verify Check Mandatory    5
-TC_050
+TC_050 Verify input account not display warning in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    6
     billpay.Click Send Payment Button
     billpay.Verify Check Mandatory    6
-TC_051
+TC_051 Verify account and verify account not match in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    7
     billpay.Click Send Payment Button
     common.Check Error    51
-TC_052
+TC_052 Verify input amount not display warning in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    8
     billpay.Click Send Payment Button
     billpay.Verify Check Mandatory    8
-TC_053
+TC_053 Verify input amount invalid format in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input data to box in Bill Pay Tab    53
     billpay.Click Send Payment Button
     common.Check Error    53
-TC_054
+TC_054 Verify select account and all mandatory was warned in Bill Pay Page
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Select From Account in Bill Pay Tab    2
     billpay.Click Send Payment Button
     billpay.Verify Check Mandatory    ${EMPTY}
-TC_055
+TC_055 Verify bill payment Successfully in Bill Pay Page 
     billpay.Click Bill Pay Tab
     billpay.Verify Bill Pay Tab Successfully
     billpay.Input All data to box in Bill Pay Tab

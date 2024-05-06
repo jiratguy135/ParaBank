@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240506 14:04:55.811" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Guyji\.vscode\extensions\robocorp.robotframework-lsp-1.12.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="common.Transfer Funds Button">
+<msg timestamp="20240506 14:04:59.633" level="FAIL">No keyword with name 'common.Transfer Funds Button' found.</msg>
+<status status="FAIL" starttime="20240506 14:04:59.633" endtime="20240506 14:04:59.633"/>
+</kw>
+<kw name="transfer.Verify Transfer Funds Successfully">
+<status status="NOT RUN" starttime="20240506 14:04:59.636" endtime="20240506 14:04:59.636"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240506 14:04:59.636" endtime="20240506 14:04:59.636"/>
+</kw>
+<kw name="transfer.Input Amount Box">
+<arg>${AMOUNT}</arg>
+<status status="NOT RUN" starttime="20240506 14:04:59.639" endtime="20240506 14:04:59.639"/>
+</kw>
+<kw name="transfer.Transfer Button">
+<status status="NOT RUN" starttime="20240506 14:04:59.642" endtime="20240506 14:04:59.642"/>
+</kw>
+<kw name="transfer.Verify Transfer Complete">
+<arg>${AMOUNT}</arg>
+<status status="NOT RUN" starttime="20240506 14:04:59.643" endtime="20240506 14:04:59.643"/>
+</kw>
+<status status="PASS" starttime="20240506 14:04:55.846" endtime="20240506 14:04:59.913"/>
+</kw>
+<status status="PASS" starttime="20240506 14:04:55.845" endtime="20240506 14:04:59.914"/>
+</test>
+<status status="PASS" starttime="20240506 14:04:55.813" endtime="20240506 14:04:59.915"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
