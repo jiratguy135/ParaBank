@@ -1,0 +1,43 @@
+BillPay:
+  - index: 0
+    locator: css:input[name='payee.name']:nth-child(1)
+    text: Payee Name
+  - index: 1
+    locator: css:input[name='payee.address.street']:nth-child(1)
+    text: AdressStreet
+  - index: 2
+    locator: css:input[name='payee.address.city']:nth-child(1)
+    text: AdressCity
+  - index: 3
+    locator: css:input[name='payee.address.state']:nth-child(1)
+    text: AdressState
+  - index: 4
+    locator: css:input[name='payee.address.zipCode']:nth-child(1)
+    text: AdressZipcode
+  - index: 5
+    locator: css:input[name='payee.phoneNumber']:nth-child(1)
+    text: 0811111111
+  - index: 6
+    locator: css:input[name='payee.accountNumber']:nth-child(1)
+    text: 123456
+  - index: 7
+    locator: css:input[name='verifyAccount']:nth-child(1)
+    text: 123456
+  - index: 8
+    locator: css:input[name='amount']:nth-child(1)
+    text: 1000
+  - index: 40
+    locator: css:input[name='payee.accountNumber']:nth-child(1)
+    text: testInvalidFormatAccount
+  - index: 41
+    locator: css:input[name='verifyAccount']:nth-child(1)
+    text: testInvalidFormatVerifyAccount
+  - index: 42
+    locator: css:input[name='amount']:nth-child(1)
+    text: testInvalidFormatAmount
+  - index: 43
+    locator: css:input[name='verifyAccount']:nth-child(1)
+    text: 6789
+  - index: 53
+    locator: css:input[name='amount']:nth-child(1)
+    text: testAmount

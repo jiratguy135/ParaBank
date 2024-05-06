@@ -9,9 +9,18 @@ ${URL}    https://parabank.parasoft.com/parabank/index.htm
 Open Browser ParaBank
     Open Browser    ${URL}    chrome
     Maximize Browser Window
-Register Page
+Register Button
     Wait Until Element Is Visible    id:leftPanel
     Click Element    xpath://*[@id="loginPanel"]/p[2]/a
+Login Button
+    Wait Until Element Is Visible    id=loginPanel
+    Click Element    css:input[class="button"]:nth-child(1)
+Open New Account Button
+    Wait Until Element Is Visible    xpath://*[@id="leftPanel"]/h2
+    Click Element    xpath://*[@id="leftPanel"]/ul/li[1]/a
+Transfer Funds Button
+    Wait Until Element Is Visible    xpath://*[@id="rightPanel"]/div/div/h1
+    Click Element    xpath://*[@id="leftPanel"]/ul/li[3]/a
 Check TXT
     [Arguments]    ${Locator}    ${Expected}
     Wait Until Element Is Visible    ${Locator}

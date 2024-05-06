@@ -1,0 +1,28 @@
+BillPayError:
+  - index: 0
+    locator: css:span[ng-show="!validationModel.name"]:nth-child(1)
+    text: Payee name is required.
+  - index: 1
+    locator: css:span[ng-show="!validationModel.address"]:nth-child(1)
+    text: Address is required.
+  - index: 2
+    locator: css:span[ng-show="!validationModel.city"]:nth-child(1)
+    text: City is required.
+  - index: 3
+    locator: css:span[ng-show="!validationModel.state"]:nth-child(1)
+    text: State is required.
+  - index: 4
+    locator: css:span[ng-show="!validationModel.zipCode"]:nth-child(1)
+    text: Zip Code is required.
+  - index: 5
+    locator: css:span[ng-show="!validationModel.phoneNumber"]:nth-child(1)
+    text: Phone number is required.
+  - index: 6
+    locator: css:span[ng-show="validationModel.account == 'empty'"]:nth-child(1)
+    text: Account number is required.
+  - index: 9
+    locator: css:span[ng-show="validationModel.verifyAccount == 'empty'"]:nth-child(1)
+    text: Account number is required.
+  - index: 8
+    locator: css:span[ng-show="validationModel.amount == 'empty'"]:nth-child(1)
+    text: The amount cannot be empty. 

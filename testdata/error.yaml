@@ -17,3 +17,21 @@ Error:
   - index: 35
     locator: id:amount.errors
     text: Please enter a valid amount.
+  - index: 40
+    locator: css:span[ng-show="validationModel.account == 'invalid'"]:nth-child(2)
+    text: Please enter a valid number.
+  - index: 41
+    locator: css:span[ng-show="validationModel.verifyAccount == 'invalid'"]:nth-child(2)
+    text: Please enter a valid number. 
+  - index: 42
+    locator: css:span[ng-show="validationModel.amount == 'invalid'"]:nth-child(2)
+    text: Please enter a valid amount.
+  - index: 43
+    locator: css:span[ng-show="validationModel.verifyAccount == 'mismatch'"]:nth-child(3)
+    text: The account numbers do not match.
+  - index: 53
+    locator: css:span[ng-show="validationModel.amount == 'invalid'"]:nth-child(2)
+    text: Please enter a valid amount.
+  - index: 51
+    locator: css:span[ng-show="validationModel.verifyAccount == 'mismatch'"]:nth-child(3)
+    text: The account numbers do not match.
